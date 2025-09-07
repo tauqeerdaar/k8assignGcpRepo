@@ -11,7 +11,8 @@ permissions:
 env:
   PLAN_BUCKET: plan-bucket-terry
   DESTROY_SUBPATH: destroy
-
+  project: ${{ secrets.GOOGLE_PROJECT_ID }}
+  
 jobs:
   # -------------------------------------------------
   # 1) PLAN (auto)
