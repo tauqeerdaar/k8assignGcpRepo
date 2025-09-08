@@ -19,3 +19,11 @@ module "gke" {
   subnet1 = module.network.subnet1_id
   node_sa    = module.iam.node_sa_email
 }
+
+#to make a backened file for destroy
+terraform {
+  backend "gcs" {
+    bucket = "plan-bucket-terry"
+    prefix = "terraform/state"
+  }
+}
